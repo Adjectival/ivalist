@@ -1,0 +1,15 @@
+current directory: /Users/alexanderjacks/Desktop/ivalist/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+/Users/alexanderjacks/.rubies/ruby-2.2.2/bin/ruby -r ./siteconf20180228-21742-1dptqrs.rb extconf.rb
+creating Makefile
+
+current directory: /Users/alexanderjacks/Desktop/ivalist/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /Users/alexanderjacks/Desktop/ivalist/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.bundle
+
+current directory: /Users/alexanderjacks/Desktop/ivalist/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20180228-21742-vd365h/bindex
