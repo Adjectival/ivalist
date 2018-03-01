@@ -25,8 +25,11 @@ Local Dev
 
 Heroku dyno
 `heroku run rails console` //rails irb
+
 `rails server -b $IP -p $PORT` // this ought to work, w the right env
 // not working --> try a direct heroku console, not the rails irb
+
+`heroku run rails server -b $IP -p $PORT` // almost works: cannot declare PORT to listen on correctly
 
 4) DB API test // once Heroku db server spun up, test it
 curl -H "Content-Type:application/json; charset=utf-8" -d '{ "user" : { "first_name" : "alex", "last_name" : "admin" } }' https://immense-harbor-90332.herokuapp.com/users
