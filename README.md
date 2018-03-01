@@ -12,18 +12,26 @@ Things you may want to cover:
 
 * Configuration
 
-* Database creation
+1) Database creation
 `pg_ctl -D /usr/local/var/postgres -l logfile start`
 `rails db:create`
 
-* Database initialization
+2-n) Deployment instructions and Heroku refresh
+`git push heroku master && heroku run rake db:migrate`
+
+3) Database initialization
+Local Dev
 `pg_ctl -D /usr/local/var/postgres -l logfile start`
 
-* Db username: alex admin
+Heroku dyno
+`heroku run rails console` //rails irb
+`rails server -b $IP -p $PORT` // this ought to work, w the right env
+// not working --> try a direct heroku console, not the rails irb
 
-* Deployment instructions
-`git push heroku master`
-`heroku run rake db:migrate`
+4) DB API test // once Heroku db server spun up, test it
+curl -H "Content-Type:application/json; charset=utf-8" -d '{ "user" : { "first_name" : "alex", "last_name" : "admin" } }' https://immense-harbor-90332.herokuapp.com/users
+
+
 
 * How to run the test suite
 
